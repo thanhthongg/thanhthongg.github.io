@@ -1,0 +1,143 @@
+INDEX.CSS
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: hobo std;
+  text-decoration: none;
+}
+header{
+  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://wallpaperforu.com/wp-content/uploads/2020/07/80s-wallpaper-200715142429441920x1080.jpg); 
+  height: 100vh;
+  background-size: cover;  
+  background-position: center;
+}
+ul{
+  float: right;
+  list-style-type: none;
+  margin-top: 25px;
+}
+.logo{
+  position: absolute;
+  float: left;
+  font-size: 70px;
+  padding-left:90px;
+  top: 25px;
+  display: inline-block;
+}
+ul li{
+  display: inline-block;
+}
+ul li a{
+  text-decoration:none;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  transition: 0.6s ease;
+}
+ul li a:hover{
+background-color: #fff;
+  color: #000;
+}
+ul li.active a{
+  background-color: #fff;
+  color: #000;
+}
+.title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.title h1{
+  color: #fff;
+  font-size: 65px;
+  
+}
+.button{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.btn{
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  transition: 0.6s ease;
+  display: inline-block;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 13px;
+}
+.btn:hover{
+  background-color: #fff;
+  color: #000;
+}
+.login{
+  position: absolute;
+  right: 20px;
+  top: 75px;
+}
+.lgn{
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  transition: 0.6s ease;
+  display: inline-block;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 10px;
+}
+ul li a:hover{
+background-color: #fff;
+  color: #000;
+}
+
+
+  
+
+
+------------------------------------------------------------------------------
+
+INDEX.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>YourMusicWorld.MS</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <header>
+    <div class="main">
+      <div class="logo">
+        <a href="#">YMW</a>
+      </div>
+      <ul>
+        <li class ="active"><a href="#">Home</a></li>
+        <li><a href="#">Top genres</a></li>
+        <li><a href="#">Rankings</a></li><!--us,uk...-->
+        <li><a href="#">Music genre</a></li><!--lofi, relax, ncs, rap, rock roll...-->
+        <li><a href="#">Top 100</a></li><!--us,uk...-->
+      </ul>
+      </div>
+      <div class="title">
+        <h1>
+          YOUR MUSIC WORLD
+        </h1>
+      </div>
+      <div class= "button">
+        <a href="#" class= "btn"> Recently played</a>
+        <a href="#" class= "btn"> Made for you</a>
+        <a href="#" class= "btn"> DJ top 100 picks</a>
+        <a href="#" class= "btn"> Choise of AllSound</a>
+      </div>
+      <div class="login">
+        <ul>
+        <li class="nigol"><a href="#" class= "lgn"> Log in</a></li>
+        <li><a href="#" class= "lgn"> Sign in</a></li>
+          </ul>
+    </div>
+      </header>
+  </body>
