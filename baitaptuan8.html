@@ -1,0 +1,350 @@
+<style>
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+body {
+  background: #ccc;
+  margin: 30px 50px;
+  line-height: 1.4;
+}
+
+.btn {
+  background: var(--dark);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
+/* Navigation */
+.main-nav ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a {
+  background: var(--primary);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.main-nav a:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+.showcase {
+  grid-area: showcase;
+  min-height: 400px;
+  background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://upload.wikimedia.org/wikipedia/commons/e/e8/Hatch_Green_Chile_Hamburger.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: var(--light);
+}
+
+.showcase p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: var(--light);
+}
+
+.top-box {
+  background: var(--primary);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  color: #d35400;
+}
+
+.top-box .price {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.top-box-a {
+  grid-area: top-box-a;
+  background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/d/b/dbl_crunchy_bg-min_1.jpg);
+  background-position: center;
+  background-size: Cover;
+}
+
+.top-box-b {
+  grid-area: top-box-b;
+  background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/c/r/crunchy_whp-min_1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+  .top-box-c{
+    grid: top-box-c;
+    background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/b/o/bo_nuong_whopper_alc__1.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .top-box-d{
+    grid: top-box-d;
+    background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/c/r/crunchy_whp-min_1.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .top-box-e{
+    grid: top-box-e;
+    background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/b/u/burger_b_n_ng_ph_mai_th_t_heo_x_ng_kh_i_whopper_1.jpg);
+    background-position: center;
+    background-size:cover;
+  }
+
+.boxes {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+  background: var(--primary);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+.info {
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+}
+
+.portfolio {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.portfolio img {
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+footer {
+  margin-top: 2rem;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 700px) {
+  .top-container {
+    grid-template-areas:
+      'showcase showcase'
+      'top-box-a top-box-b top-box-c top-box-d top-box-e';
+  }
+
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .info .btn {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-container {
+    grid-template-areas:
+      'showcase'
+      'top-box-a'
+      'top-box-b'
+      'top-box-c'
+      'top-box-d'
+      'top-box-e';
+  }
+}
+</style>
+
+
+
+
+
+
+
+<div class="wrapper">
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <a href="#">Burger King</a>
+        </li>
+        <li>
+          <a href="#">Thực Đơn</a>
+        </li>
+        <li>
+          <a href="#">Cửa Hàng</a>
+        </li>
+        <li>
+          <a href="#">Đơn Hàng</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="top-container">
+      <header class="showcase">
+        <h1>Dinh Dưỡng Burger Mang Lại</h1>
+        <p>Thức ăn nhanh như hamburger thường được cho rằng không tốt cho sức khỏe của bạn. Vậy, liệu ăn hamburger có đem lại lợi ích nào mà bạn không biết không? Hãy cùng tìm hiểu nhé.</p>
+        <a href="#" class="btn">Tìm Hiểu</a>
+      </header>
+      <div class="top-box top-box-a">
+        <h4>BURGER 2 MIẾNG BÒ NƯỚNG PHÔ MAI THỊT XÔNG KHÓI WHOPPER</h4>
+        <p class="price">161.000 VND</p>
+        <a href="" class="btn">Mua Ngay</a>
+      </div>
+      <div class="top-box top-box-b">
+        <h4>BURGER BÒ NƯỚNG PHÔ MAI THỊT HEO XÔNG KHÓI WHOPPER</h4>
+        <p class="price">125.000 VND</p>
+        <a href="" class="btn">Mua Ngay</a>
+      </div>
+      <div class="top-box top-box-c">
+        <h4>BURGER 2 MIẾNG BÒ PHÔ MAI THỊT XÔNG KHÓI</h4>
+        <p class="price">87.000 VND</p>
+        <a href="" class="btn">Mua Ngay</a>
+      </div>
+       <div class="top-box top-box-d">
+        <h4>BÒ TẮM PHÔ MAI (Bánh Lớn)</h4>
+        <p class="price">105.000 VND</p>
+        <a href="" class="btn">Mua Ngay</a>
+      </div>
+       <div class="top-box top-box-e">
+        <h4>Burger 2 Miếng Bò Khoai Giòn Tràn Phô Mai</h4>
+        <p class="price">79.000 VND</p>
+        <a href="" class="btn">Mua Ngay</a>
+      </div>
+    </section>
+
+    <section class="info">
+      <img src="https://burgerking.vn/media/news/image/b/a/banner_promo_757x477_9.jpg" alt="">
+      <div> 
+        <h2>Những Khuyến Mãi Khi Mua</h2>
+        <p>MUA 1 TẶNG 1 - THỨ 5 HÀNG TUẦN. <br/>
+           Siêu Nhân Phô Mai – Mua 1 Tặng 1. <br/>
+           Happy Women's Day. <br/>
+           HELLO NOVEMBER. <br/>
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/s/i/sieu_nhan_pho_mai_co_vua_1.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/c/h/cheese_ring_whopper_1.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/b/u/burger_phong_c_ch_m_i_3.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/e/x/exc_whopper_2.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/g/r/grilled_onion_alc__1.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/d/b/dbl_crunchy_bg-min_1.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/c/r/crunchy_whp-min_1_2.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/w/h/whopperjr_1.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/t/e/tender_grilled.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/d/o/double_whopper_bbq_bacon_cheese.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/b/u/burger_2_mi_ng_b_n_ng_2.jpg" >
+      <img src="https://burgerking.vn/media/catalog/product/cache/1/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/b/u/burger_2_mi_ng_b_ph_mai_th_t_x_ng_kh_i_2.jpg" >
+    </section>
+  
+    <section class="boxes">
+      <div class="box">
+        <i class="fas fa-chart-pie fa-4x"></i>
+        <h3>Giới Thiệu</h3>
+        <p>Được thành lập vào năm 1954, BURGER KING® hiện là chuỗi nhà hàng thức ăn nhanh lớn nhất thế giới. Mỗi ngày, có hơn 11 triệu thực khách đến với các nhà hàng BURGER KING® trên khắp thế giới để thưởng thức các món ăn chất lượng cao, hương vị tuyệt hảo và giá cả phải chăng.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-globe fa-4x"></i>
+        <h3>Hướng Dẫn</h3>
+        <p>B1: TÌM KIẾM, LỰA CHỌN PHẦN ĂN <br/>
+           B2: THAY ĐỔI, NÂNG CẤP PHẦN ĂN<br/>
+           B3: KIỂM TRA GIỎ HÀNG, TIẾN HÀNH THANH TOÁN<br/>
+           B4: NHẬP THÔNG TIN GIAO HÀNG<br/>
+        </p>
+      </div>
+      <div class="box">
+        <i class="fas fa-cog fa-4x"></i>
+        <h3>Liên Hệ</h3>
+        <p>Địa chỉ: Tầng 5, 91 Pasteur, P.Bến Nghé , Quận 1, Tp Hồ Chí Minh <br/>
+           Điện thoại: (+84 8) 3521 8845 <br/>
+           Email: marketing.info@burgerkingvn.vn <br/>
+           an.nguyen@burgerkingvn.vn<br/>
+        </p>
+      </div>
+      <div class="box">
+        <i class="fas fa-users fa-4x"></i>
+        <h3>Tuyển Dụng</h3>
+        <p>Part-time: 4 - 6 tiếng/ngày (ca xoay) <br/>
+           Full-time: 8 tiếng/ngày (ca xoay) <br/>
+        - Nhân Viên Phục Vụ - Giao Hàng.<br/>
+
+        - Quản Lý/ Trợ lý Quản Lý/ Giám Sát Nhà Hàng.<br/></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright 2015 Burger King Corporation.All Rights Reserved.Designed by Levinci Group</p>
+    </footer>
+
+  </div>
