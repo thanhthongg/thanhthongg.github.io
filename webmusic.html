@@ -1,3 +1,4 @@
+
 <style>
 *{
   margin: 0;
@@ -12,17 +13,16 @@ header{
   background-position: center;
 }
 ul.submenu{
-  float: right;
+  font-size: 2rem;
+  text-align: center;
   list-style-type: none;
-  margin-top: 25px;
-}
-.logo{
-  position: absolute;
-  float: left;
-  font-size: 70px;
-  padding-left:90px;
-  top: 25px;
-  display: inline-block;
+  padding: 0.8rem;
+  text-transform: uppercase;
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+  list-style: none;
+  grid-template-columns: repeat(5,1fr);
 }
 ul.submenu > li{
   display: inline-block;
@@ -42,22 +42,29 @@ ul.submenu > li.active a{
   background-color: #fff;
   color: #000;
 }
-.title{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
 .title h1{
-  color: #fff;
-  font-size: 65px;
-  
-}
-.button{
+  display: grid;
+  grid-gap: 20px;
   position: absolute;
   top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
+  color: #fff;
+  font-size: 60px;
+  text-align: Center;
+}
+.button{
+/*  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+  display: grid;
+  text-align: center;
+  grid-gap: 20px;
+  grid-template-areas:
+    'btn btn'
+    'btn btn';
+  
 }
 .btn{
   border: 1px solid #fff;
@@ -66,8 +73,7 @@ ul.submenu > li.active a{
   transition: 0.6s ease;
   display: inline-block;
   list-style-type: none;
-  text-decoration: none;
-  font-size: 13px;
+  text-decoration: none; 
 }
 .btn:hover{
   background-color: #fff;
@@ -75,7 +81,7 @@ ul.submenu > li.active a{
 }
 .login{
   position: absolute;
-  top: 70%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
@@ -87,13 +93,13 @@ ul.submenu > li.active a{
   display: inline-block;
   list-style-type: none;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 1.3rem;
 }
 ul.submenu li a:hover{
 background-color: #fff;
   color: #000;
 }
-  ul.submenu1
+/*  ul.submenu1
 	{
 		width: 200px;
 		background: white;
@@ -202,6 +208,26 @@ background-color: #fff;
 			background-color: gray;
 			color: black;
 			transform: ease-in 0.35s;
+  }  */
+  
+  
+  @media (max-width: 700px){
+    .menu ul{
+      grid-template-columns: 1fr;
+      font-size: 1.3rem;
+    }
+    .title{
+      grid-template-columns: 1fr;
+    }
+    .title h1{
+      font-size: 3rem;
+    }
+    .login .lgn{
+      display: block;
+      text-align: center;
+      margin: auto;
+      font-size: 1rem;
+    }
   }
 </style>
 
@@ -218,15 +244,12 @@ background-color: #fff;
   <body>
     <header>
     <div class="main">
-      <div class="logo">
-        <a href="https://thanhthongg.github.io/webmusic.html">YMW</a>
-      </div>
-      <div class="menu">
+      <nav class="menu">
       <ul class="submenu">
         <li class ="active"><a href="https://thanhthongg.github.io/webmusic.html">Home</a></li>
         <li><a href="#">Top genres</a>
         
-        <ul class="submenu1">
+     <!--   <ul class="submenu1">
 	  <li><a href="#">POP Music</a></li>
 	  <li><a href="#">Country Music</a></li>
 	  <li><a href="#">Rock Music</a></li>
@@ -236,12 +259,12 @@ background-color: #fff;
           <li><a href="#">Blues Music</a></li>
           <li><a href="#">Flamenco Music</a></li>
 
-	</ul>
+	</ul>  -->
         
         </li>
         <li><a href="#">Artist</a>
         
-        <ul class="submenu3">
+    <!--    <ul class="submenu3">
 	  <li><a href="#">K-pop</a></li>
 	  <li><a href="#">J-pop</a></li>
 	  <li><a href="#">V-pop</a></li>
@@ -249,12 +272,12 @@ background-color: #fff;
           <li><a href="#">US</a></li>
           <li><a href="#">UK</a></li>
 
-	</ul>
+	</ul> -->
         
-        </li><!--us,uk...-->
+        </li>
         <li><a href="#">Music genre</a>
         
-        <ul class="submenu2">
+       <!-- <ul class="submenu2">
             
 	  <li><a href="#">K-pop</a></li>
 	  <li><a href="#">J-pop</a></li>
@@ -268,13 +291,13 @@ background-color: #fff;
           <li><a href="#">Jazz</a></li>
           <li><a href="#">Country</a></li>
 
-	</ul>
+	</ul> -->
         
         
         </li>
         <li><a href="https://thanhthongg.github.io/top10.html">Top 10</a></li>
       </ul>
-      </div>
+      </nav>
       <div class="title">
         <h1>
           YOUR MUSIC WORLD
